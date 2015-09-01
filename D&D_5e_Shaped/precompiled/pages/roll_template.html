@@ -3,32 +3,31 @@
     <div class="sheet-rt-header sheet-relative{{#attack_roll}} sheet-attack{{/attack_roll}}{{#spell}} sheet-spell{{/spell}}{{#ability}} sheet-ability{{/ability}}{{#save}} sheet-save{{/save}}{{#death_save}} sheet-death-save{{/death_save}}">
       <div class="sheet-rt-title sheet-pad-l-xxl sheet-pad-r-xxl">{{title}}</div>
       <div class="sheet-tooltip-position-wrapper">
-        {{#spell_concentration}}
+        {{#concentration}}
           <div class="sheet-col sheet-tooltip">
             <span class="sheet-pictos-custom sheet-concentration-icon sheet-center">y</span>
             <div class="sheet-tooltip-content-left sheet-tooltip-small sheet-small-label"><span>Concentration</span></div>
           </div>
-        {{/spell_concentration}}
-        {{#spell_ritual}}
+        {{/concentration}}
+        {{#ritual}}
           <div class="sheet-col sheet-tooltip">
             <span class="sheet-pictos-custom sheet-ritual-icon sheet-center">r</span>
             <div class="sheet-tooltip-content-left sheet-tooltip-small sheet-small-label"><span>Ritual</span></div>
           </div>
-        {{/spell_ritual}}
+        {{/ritual}}
       </div>
       {{#show_character_name}}
         <div class="sheet-rt-sub-header">{{character_name}}</div>
       {{/show_character_name}}
 
       {{#spell}}
-        <div class="sheet-rt-sub-header">{{spell_friendly_level}}{{#spell_cast_as_level}} (as {{spell_cast_as_level}}){{/spell_cast_as_level}}{{#spell_school}} &bullet; {{spell_school}}{{/spell_school}}{{#range}} &bullet; {{range}}{{/range}}</div>
+        <div class="sheet-rt-sub-header">{{spell_friendly_level}}{{#spell_cast_as_level}} (as {{spell_cast_as_level}}){{/spell_cast_as_level}}{{#school}} &bullet; {{school}}{{/school}}{{#range}} &bullet; {{range}}{{/range}}</div>
         <div class="sheet-rt-sub-header">
-          {{#spell_components_verbal}}V{{/spell_components_verbal}}{{#spell_components_somatic}}{{#spell_components_verbal}}, {{/spell_components_verbal}}S{{/spell_components_somatic}}{{#spell_components_material}}{{#spell_components_verbal}}{{^spell_components_somatic}}, {{/spell_components_somatic}}{{/spell_components_verbal}}{{#spell_components_somatic}}, {{/spell_components_somatic}}M{{/spell_components_material}}
-          {{#spell_components_material}} ({{spell_components_material}}){{/spell_components_material}}
-          {{#spell_components}}{{spell_components}}{{/spell_components}}
+          {{#components_verbal}}V{{/components_verbal}}{{#components_somatic}}{{#components_verbal}}, {{/components_verbal}}S{{/components_somatic}}{{#components_material}}{{#components_verbal}}{{^components_somatic}}, {{/components_somatic}}{{/components_verbal}}{{#components_somatic}}, {{/components_somatic}}M{{/components_material}}
+          {{#components_material}} ({{components_material}}){{/components_material}}
         </div>
-        <div class="sheet-rt-sub-header">{{#spell_casting_time}}{{spell_casting_time}}{{/spell_casting_time}}{{#spellduration}} &bullet; {{spellduration}}{{/spellduration}}</div>
-        <div class="sheet-rt-sub-header">{{spellsource}}</div>
+        <div class="sheet-rt-sub-header">{{#casting_time}}{{casting_time}}{{/casting_time}}{{#duration}} &bullet; {{duration}}{{/duration}}</div>
+        <div class="sheet-rt-sub-header">{{source}}</div>
       {{/spell}}
       {{#attack}}
         <div class="sheet-rt-sub-header">{{attack_type}} {{#reach}} &bullet; {{reach}}{{/reach}}{{#range}} &bullet; {{range}}{{/range}}{{#ammo}} &bullet; {{ammo}} ammo{{/ammo}}{{#target}} &bullet; {{target}}{{/target}}</div>
@@ -36,9 +35,6 @@
       {{#sub_header}}
         <div class="sheet-rt-sub-header">{{sub_header}}{{#sub_header_right}} &bullet; {{sub_header_right}}{{/sub_header_right}}</div>
       {{/sub_header}}
-      {{#sub_header_2}}
-        <div class="sheet-rt-sub-header">{{sub_header_2}}{{#sub_header_right_2}} &bullet; {{sub_header_right_2}}{{/sub_header_right_2}}</div>
-      {{/sub_header_2}}
       {{#targetName}}
         <div class="sheet-rt-sub-header">vs {{targetName}}</div>
       {{/targetName}}
@@ -47,18 +43,18 @@
       <p class="sheet-rt-emote">{{character_name}} {{emote}}</p>
     {{/emote}}
     <div class="sheet-rt-content">
-      {{#spellgainedfrom}}
+      {{#gained_from}}
         <div class="sheet-shaped-row">
           <div class="sheet-col-33 sheet-rt-key">Gained From</div>
-          <div class="sheet-col-67 sheet-rt-value">{{spellgainedfrom}}</div>
+          <div class="sheet-col-67 sheet-rt-value">{{gained_from}}</div>
         </div>
-      {{/spellgainedfrom}}
-      {{#spelldescription}}
+      {{/gained_from}}
+      {{#description}}
         <div class="sheet-shaped-row">
           <div class="sheet-col sheet-rt-key">Description</div>
-          <div class="sheet-col sheet-rt-value">{{spelldescription}}</div>
+          <div class="sheet-col sheet-rt-value">{{description}}</div>
         </div>
-      {{/spelldescription}}
+      {{/description}}
       {{#spell}}
         {{#target}}
           <div class="sheet-shaped-row">
@@ -101,12 +97,12 @@
           <div class="sheet-col-67 sheet-rt-value">{{crit_damage}} {{damage_type}}{{#alt_damage}}, or {{alt_crit_damage}} {{damage_type}}{{#alt_damage_reason}} {{alt_damage_reason}}{{/alt_damage_reason}}{{/alt_damage}}{{#second_damage}} + {{second_crit_damage}} {{second_damage_type}}{{/second_damage}}</div>
         </div>
       {{/rollWasCrit() attack_adv}}
-      {{#spellhealing}}
+      {{#heal}}
         <div class="sheet-shaped-row">
           <div class="sheet-col-33 sheet-rt-key">Healing</div>
-          <div class="sheet-col-67 sheet-rt-value">{{spellhealing}} HP healed</div>
+          <div class="sheet-col-67 sheet-rt-value">{{heal}} HP healed</div>
         </div>
-      {{/spellhealing}}
+      {{/heal}}
       {{#save_condition}}
         <div class="sheet-shaped-row">
           <div class="sheet-col-33 sheet-rt-key">Save Condition</div>
@@ -150,12 +146,12 @@
         </div>
       {{/recharge}}
 
-      {{#spellhigherlevel}}
+      {{#higher_level_effects}}
         <div class="sheet-shaped-row">
           <div class="sheet-col sheet-rt-key">At Higher Levels</div>
-          <div class="sheet-col sheet-rt-value">{{spellhigherlevel}}</div>
+          <div class="sheet-col sheet-rt-value">{{higher_level_effects}}</div>
         </div>
-      {{/spellhigherlevel}}
+      {{/higher_level_effects}}
 
       {{#freetext}}
         <div class="sheet-shaped-row">
@@ -165,17 +161,17 @@
       {{/freetext}}
       {{#roll}}
         <div class="sheet-shaped-row">
-          <div class="sheet-col-33 sheet-rt-key">{{rollname}}</div>
+          <div class="sheet-col-33 sheet-rt-key">{{roll_name}}</div>
           <div class="sheet-col-67 sheet-rt-value">{{roll}}{{#roll_adv}} | {{roll_adv}}{{/roll_adv}}</div>
         </div>
       {{/roll}}
 
-      {{#allprops() classaction freetext character_name save title show_character_name sub_header sub_header_right sub_header_2 sub_header_right_2 rollname roll roll_adv ability emote death_save targetAC targetName attack attack_roll can_crit attack_type crit_damage crit_damage_adv second_damage second_damage_type second_crit_damage alt_damage alt_damage_reason alt_crit_damage melee ranged attack_adv damage target aoe reach range ammo ammo_auto ammo_field spell save_condition save_dc save_stat save_success save_failure save_damage save_damage_type save_second_damage save_second_damage_type spell_friendly_level spell_school spell_concentration spell_ritual spellgainedfrom spelldescription spellhigherlevel spell_cast_as_level spellhealing spellcasttime spell_casting_time spellduration spellsource spell_components spell_components_verbal spell_components_somatic spell_components_material effects hide_save_dc hide_save_failure hide_save_success hide_effects recharge hide_recharge                           multiattack mattack1 mdamage1 mattack1adv mcritdamage1 mattack2 mdamage2 mattack2adv mcritdamage2 mattack3 mdamage3 mattack3adv mcritdamage3 mattack4 mdamage4 mattack4adv mcritdamage4 mattack5 mdamage5 mattack5adv mcritdamage5}}
+      {{#allprops() classaction freetext character_name save title show_character_name sub_header sub_header_right roll_name roll roll_adv ability emote death_save targetAC targetName attack attack_roll can_crit attack_type crit_damage crit_damage_adv second_damage second_damage_type second_crit_damage alt_damage alt_damage_reason alt_crit_damage melee ranged attack_adv damage target aoe reach range ammo ammo_auto ammo_field spell save_condition save_dc save_stat save_success save_failure save_damage save_damage_type save_second_damage save_second_damage_type spell_friendly_level school concentration ritual gained_from description higher_level_effects spell_cast_as_level heal casting_time duration source components_verbal components_somatic components_material effects hide_save_dc hide_save_failure hide_save_success hide_effects recharge hide_recharge                           multiattack mattack1 mdamage1 mattack1adv mcritdamage1 mattack2 mdamage2 mattack2adv mcritdamage2 mattack3 mdamage3 mattack3adv mcritdamage3 mattack4 mdamage4 mattack4adv mcritdamage4 mattack5 mdamage5 mattack5adv mcritdamage5}}
         <div class="sheet-shaped-row">
           <div class="sheet-col-33 sheet-rt-key">{{key}}</div>
           <div class="sheet-col-67 sheet-rt-value">{{value}}</div>
         </div>
-      {{/allprops() classaction freetext character_name save title show_character_name sub_header sub_header_right sub_header_2 sub_header_right_2 rollname roll roll_adv ability emote death_save targetAC targetName attack attack_roll can_crit attack_type crit_damage crit_damage_adv second_damage second_damage_type second_crit_damage alt_damage alt_damage_reason alt_crit_damage melee ranged attack_adv damage target aoe reach range ammo ammo_auto ammo_field spell save_condition save_dc save_stat save_success save_failure save_damage save_damage_type save_second_damage save_second_damage_type spell_friendly_level spell_school spell_concentration spell_ritual spellgainedfrom spelldescription spellhigherlevel spell_cast_as_level spellhealing spellcasttime spell_casting_time spellduration spellsource spell_components spell_components_verbal spell_components_somatic spell_components_material effects hide_save_dc hide_save_failure hide_save_success hide_effects recharge hide_recharge                           multiattack mattack1 mdamage1 mattack1adv mcritdamage1 mattack2 mdamage2 mattack2adv mcritdamage2 mattack3 mdamage3 mattack3adv mcritdamage3 mattack4 mdamage4 mattack4adv mcritdamage4 mattack5 mdamage5 mattack5adv mcritdamage5}}
+      {{/allprops() classaction freetext character_name save title show_character_name sub_header sub_header_right roll_name roll roll_adv ability emote death_save targetAC targetName attack attack_roll can_crit attack_type crit_damage crit_damage_adv second_damage second_damage_type second_crit_damage alt_damage alt_damage_reason alt_crit_damage melee ranged attack_adv damage target aoe reach range ammo ammo_auto ammo_field spell save_condition save_dc save_stat save_success save_failure save_damage save_damage_type save_second_damage save_second_damage_type spell_friendly_level school concentration ritual gained_from description higher_level_effects spell_cast_as_level heal casting_time duration source components_verbal components_somatic components_material effects hide_save_dc hide_save_failure hide_save_success hide_effects recharge hide_recharge                           multiattack mattack1 mdamage1 mattack1adv mcritdamage1 mattack2 mdamage2 mattack2adv mcritdamage2 mattack3 mdamage3 mattack3adv mcritdamage3 mattack4 mdamage4 mattack4adv mcritdamage4 mattack5 mdamage5 mattack5adv mcritdamage5}}
 
       {{#multiattack}}
         {{#mattack1}}
@@ -305,12 +301,12 @@
       {{/multiattack}}
 
       {{#outputall}}
-        {{#allprops() outputall title subheader sub_header_right sub_header_2 sub_header_right_2 emote weapon spell ability save death_save}}
+        {{#allprops() outputall title sub_header sub_header_right emote attack spell ability save death_save}}
           <div class="sheet-shaped-row">
             <div class="sheet-col-33 sheet-rt-key">{{key}}</div>
             <div class="sheet-col-67 sheet-rt-value">{{value}}</div>
           </div>
-        {{/allprops() outputall title subheader sub_header_right sub_header_2 sub_header_right_2 emote weapon spell ability save death_save}}
+        {{/allprops() outputall title sub_header sub_header_right emote attack spell ability save death_save}}
       {{/outputall}}
     </div>
   </div>

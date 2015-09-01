@@ -60,7 +60,7 @@
             <input class="sheet-no-spin sheet-save-total" type="number" name="attr_strength_save_mod" value="@{strength_mod} + @{strength_save_prof} + @{strength_save_bonus} + (@{global_saving_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Strength_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Strength}} {{sub_header=Saving Throw}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{strength_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{strength_save_mod}]]}} @{classactionstrengthsave}">
+            <button type="roll" name="roll_Strength_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Strength}} {{sub_header=Saving Throw}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{strength_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{strength_save_mod}]]}} @{classactionstrengthsave}">
               <span class="sheet-pictos sheet-vert-top">k</span>
             </button>
           </div>
@@ -108,7 +108,7 @@
             <input class="sheet-no-spin sheet-check-total" type="number" name="attr_basic_strength_check_mod" value="@{strength_mod} + @{basic_strength_bonus} + @{jack_of_all_trades} + (@{global_check_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
-            <button type="roll" name="roll_Basic_Strength_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Strength}} {{sub_header=Ability Check}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{basic_strength_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_strength_check_mod}]]}} @{classactionunskilledstr}">
+            <button type="roll" name="roll_Basic_Strength_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Strength}} {{sub_header=Ability Check}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{basic_strength_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_strength_check_mod}]]}} @{classactionunskilledstr}">
               <span class="sheet-pictos sheet-vert-top">3</span>
             </button>
           </div>
@@ -121,7 +121,7 @@
             <input class="sheet-no-spin sheet-save-total" type="number" name="attr_dexterity_save_mod" value="@{dexterity_mod} + @{dexterity_save_prof} + @{dexterity_save_bonus} + (@{global_saving_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Dexterity_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Dexterity}} {{sub_header=Saving Throw}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{dexterity_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{dexterity_save_mod}]]}} @{classactiondexteritysave}">
+            <button type="roll" name="roll_Dexterity_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Dexterity}} {{sub_header=Saving Throw}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{dexterity_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{dexterity_save_mod}]]}} @{classactiondexteritysave}">
               <span class="sheet-pictos sheet-vert-top">k</span>
             </button>
           </div>
@@ -177,7 +177,7 @@
             <input class="sheet-no-spin sheet-check-total" type="number" name="attr_basic_dexterity_check_mod" value="@{dexterity_mod} + @{basic_dexterity_bonus} + @{jack_of_all_trades} + (@{global_check_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
-            <button type="roll" name="roll_Basic_Dexterity_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Dexterity}} {{sub_header=Ability Check}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{basic_dexterity_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_dexterity_check_mod}]]}} @{classactionunskilleddex}">
+            <button type="roll" name="roll_Basic_Dexterity_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Dexterity}} {{sub_header=Ability Check}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{basic_dexterity_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_dexterity_check_mod}]]}} @{classactionunskilleddex}">
               <span class="sheet-pictos sheet-vert-top">3</span>
             </button>
           </div>
@@ -189,7 +189,7 @@
           <div class="sheet-col-12 sheet-center sheet-vert-middle">
             <input class="sheet-no-spin sheet-save-total" type="number" name="attr_constitution_save_mod" value="@{constitution_mod} + @{constitution_save_prof} + @{constitution_save_bonus} + (@{global_saving_bonus})" disabled="disabled"></div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Constitution_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Constitution}} {{sub_header=Saving Throw}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{constitution_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{constitution_save_mod}]]}} @{classactionconstitutionsave}">
+            <button type="roll" name="roll_Constitution_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Constitution}} {{sub_header=Saving Throw}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{constitution_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{constitution_save_mod}]]}} @{classactionconstitutionsave}">
               <span class="sheet-pictos sheet-vert-top">k</span>
             </button>
           </div>
@@ -233,7 +233,7 @@
             <input class="sheet-no-spin sheet-check-total" type="number" name="attr_basic_constitution_check_mod" value="@{constitution_mod} + @{basic_constitution_bonus} + @{jack_of_all_trades} + (@{global_check_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
-            <button type="roll" name="roll_Basic_Constitution_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Constitution}} {{sub_header=Ability Check}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{basic_constitution_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_constitution_check_mod}]]}} @{classactionunskilledcon}">
+            <button type="roll" name="roll_Basic_Constitution_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Constitution}} {{sub_header=Ability Check}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{basic_constitution_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_constitution_check_mod}]]}} @{classactionunskilledcon}">
               <span class="sheet-pictos sheet-vert-top">3</span>
             </button>
           </div>
@@ -245,7 +245,7 @@
           <div class="sheet-col-12 sheet-center sheet-vert-middle">
             <input class="sheet-no-spin sheet-save-total" type="number" name="attr_intelligence_save_mod" value="@{intelligence_mod} + @{intelligence_save_prof} + @{intelligence_save_bonus} + (@{global_saving_bonus})" disabled="disabled"></div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Intelligence_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Intelligence}} {{sub_header=Saving Throw}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{intelligence_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{intelligence_save_mod}]]}} @{classactionintelligencesave}">
+            <button type="roll" name="roll_Intelligence_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Intelligence}} {{sub_header=Saving Throw}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{intelligence_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{intelligence_save_mod}]]}} @{classactionintelligencesave}">
               <span class="sheet-pictos sheet-vert-top">k</span>
             </button>
           </div>
@@ -293,7 +293,7 @@
             <input class="sheet-no-spin sheet-check-total" type="number" name="attr_basic_intelligence_check_mod" value="@{intelligence_mod} + @{basic_intelligence_bonus} + @{jack_of_all_trades} + (@{global_check_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
-            <button type="roll" name="roll_Basic_Intelligence_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Intelligence}} {{sub_header=Ability Check}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{basic_intelligence_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_intelligence_check_mod}]]}} @{classactionunskilledint}">
+            <button type="roll" name="roll_Basic_Intelligence_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Intelligence}} {{sub_header=Ability Check}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{basic_intelligence_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_intelligence_check_mod}]]}} @{classactionunskilledint}">
               <span class="sheet-pictos sheet-vert-top">3</span>
             </button>
           </div>
@@ -306,7 +306,7 @@
             <input class="sheet-no-spin sheet-save-total" type="number" name="attr_wisdom_save_mod" value="@{wisdom_mod} + @{wisdom_save_prof} + @{wisdom_save_bonus} + (@{global_saving_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Wisdom_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Wisdom}} {{sub_header=Saving Throw}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{wisdom_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{wisdom_save_mod}]]}} @{classactionwisdomsave}">
+            <button type="roll" name="roll_Wisdom_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Wisdom}} {{sub_header=Saving Throw}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{wisdom_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{wisdom_save_mod}]]}} @{classactionwisdomsave}">
               <span class="sheet-pictos sheet-vert-top">k</span>
             </button>
           </div>
@@ -338,7 +338,7 @@
             <input class="sheet-no-spin sheet-check-total" type="number" name="attr_basic_wisdom_check_mod" value="@{wisdom_mod} + @{basic_wisdom_bonus} + @{jack_of_all_trades} + (@{global_check_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
-            <button type="roll" name="roll_Basic_Wisdom_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Wisdom}} {{sub_header=Ability Check}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{basic_wisdom_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_wisdom_check_mod}]]}} @{classactionunskilledwis}">
+            <button type="roll" name="roll_Basic_Wisdom_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Wisdom}} {{sub_header=Ability Check}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{basic_wisdom_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_wisdom_check_mod}]]}} @{classactionunskilledwis}">
               <span class="sheet-pictos sheet-vert-top">3</span>
             </button>
           </div>
@@ -351,7 +351,7 @@
             <input class="sheet-no-spin sheet-save-total" type="number" name="attr_charisma_save_mod" value="@{charisma_mod} + @{charisma_save_prof} + @{charisma_save_bonus} + (@{global_saving_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Charisma_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Charisma}} {{sub_header=Saving Throw}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{charisma_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{charisma_save_mod}]]}} @{classactioncharismasave}">
+            <button type="roll" name="roll_Charisma_Save" value="@{output_option} &{template:5e} {{save=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Charisma}} {{sub_header=Saving Throw}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{charisma_save_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{charisma_save_mod}]]}} @{classactioncharismasave}">
               <span class="sheet-pictos sheet-vert-top">k</span>
             </button>
           </div>
@@ -380,7 +380,7 @@
             <input class="sheet-no-spin sheet-check-total" type="number" name="attr_basic_charisma_check_mod" value="@{charisma_mod} + @{basic_charisma_bonus} + @{jack_of_all_trades} + (@{global_check_bonus})" disabled="disabled">
           </div>
           <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
-            <button type="roll" name="roll_Basic_Charisma_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Charisma}} {{sub_header=Ability Check}} {{rollname=Result}} {{roll=[[d20@{d20_mod} + @{basic_charisma_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_charisma_check_mod}]]}} @{classactionunskilledcha}">
+            <button type="roll" name="roll_Basic_Charisma_Check" value="@{output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Charisma}} {{sub_header=Ability Check}} {{roll_name=Result}} {{roll=[[d20@{d20_mod} + @{basic_charisma_check_mod}]]}} {{roll_adv=[[d20@{d20_mod} + @{basic_charisma_check_mod}]]}} @{classactionunskilledcha}">
               <span class="sheet-pictos sheet-vert-top">3</span>
             </button>
           </div>
@@ -452,7 +452,7 @@
         <div class="sheet-col-37 sheet-offset-5 sheet-center">
           <div class="sheet-wrap-box sheet-initiative">
             <input class="sheet-center sheet-no-spin sheet-initiative-total" type="number" name="attr_initiative_overall" value="(@{dexterity_mod} + @{initiative} + @{jack_of_all_trades}) + (@{global_check_bonus})" disabled="disabled">
-            <button type="roll" name="roll_Initiative" value="@{initiative_output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Initiative}} {{sub_header=Ability Check}} {{rollname=Initiative}} {{roll=[[d20@{d20_mod} + @{initiative_to_tracker} + [[@{initiative_tie_breaker}]]]]}} @{classactioninitiative}"></button>
+            <button type="roll" name="roll_Initiative" value="@{initiative_output_option} &{template:5e} {{ability=1}} {{character_name=@{character_name}}} @{show_character_name} {{title=Initiative}} {{sub_header=Ability Check}} {{roll_name=Initiative}} {{roll=[[d20@{d20_mod} + @{initiative_to_tracker} + [[@{initiative_tie_breaker}]]]]}} @{classactioninitiative}"></button>
             <div class="sheet-wrap-box-title">Initiative</div>
           </div>
         </div>
@@ -512,7 +512,7 @@
             <input type="number" name="attr_hd_d4_max">
           </div>
           <div class="sheet-col-30 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Use_HD_d4" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d4}} {{rollname=HP regained}} {{roll=[[d4 + @{constitution_mod}]]}} @{classactionhitdice}">
+            <button type="roll" name="roll_Use_HD_d4" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d4}} {{roll_name=HP regained}} {{roll=[[d4 + @{constitution_mod}]]}} @{classactionhitdice}">
               <span>d4</span>
             </button>
           </div>
@@ -531,7 +531,7 @@
             </div>
           </div>
           <div class="sheet-col-30 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Use_HD_d6" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d6}} {{rollname=HP regained}} {{roll=[[d6 + @{constitution_mod}]]}} @{classactionhitdice}">
+            <button type="roll" name="roll_Use_HD_d6" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d6}} {{roll_name=HP regained}} {{roll=[[d6 + @{constitution_mod}]]}} @{classactionhitdice}">
               <span>d6</span>
             </button>
           </div>
@@ -550,7 +550,7 @@
             </div>
           </div>
           <div class="sheet-col-30 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Use_HD_d8" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d8}} {{rollname=HP regained}} {{roll=[[d8 + @{constitution_mod}]]}} @{classactionhitdice}">
+            <button type="roll" name="roll_Use_HD_d8" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d8}} {{roll_name=HP regained}} {{roll=[[d8 + @{constitution_mod}]]}} @{classactionhitdice}">
               <span>d8</span>
             </button>
           </div>
@@ -569,7 +569,7 @@
             </div>
           </div>
           <div class="sheet-col-30 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Use_HD_d10" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d10}} {{rollname=HP regained}} {{roll=[[d10 + @{constitution_mod}]]}} @{classactionhitdice}">
+            <button type="roll" name="roll_Use_HD_d10" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d10}} {{roll_name=HP regained}} {{roll=[[d10 + @{constitution_mod}]]}} @{classactionhitdice}">
               <span>d10</span>
             </button>
           </div>
@@ -588,7 +588,7 @@
             </div>
           </div>
           <div class="sheet-col-30 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Use_HD_d12" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d12}} {{rollname=HP regained}} {{roll=[[d12 + @{constitution_mod}]]}} @{classactionhitdice}">
+            <button type="roll" name="roll_Use_HD_d12" value="@{output_option} &{template:5e} {{character_name=@{character_name}}} @{show_character_name} {{title=Spending Hit Dice}} {{sub_header=d12}} {{roll_name=HP regained}} {{roll=[[d12 + @{constitution_mod}]]}} @{classactionhitdice}">
               <span>d12</span>
             </button>
           </div>
@@ -602,7 +602,7 @@
             <input type="number" name="attr_hd_d20_max">
           </div>
           <div class="sheet-col-30 sheet-center sheet-vert-middle">
-            <button type="roll" name="roll_Use_HD_d20" value="@{output_option} &{template:5e} {{title=Spending Hit Dice - d20}} {{sub_header=@{character_name}}} {{rollname=HP regained}} {{roll=[[d20 + @{constitution_mod}]]}} @{classactionhitdice}">
+            <button type="roll" name="roll_Use_HD_d20" value="@{output_option} &{template:5e} {{title=Spending Hit Dice - d20}} {{sub_header=@{character_name}}} {{roll_name=HP regained}} {{roll=[[d20 + @{constitution_mod}]]}} @{classactionhitdice}">
               <span>d20</span>
             </button>
           </div>
@@ -637,7 +637,7 @@
               </div>
             </div>
             <div class="sheet-col-15 sheet-center sheet-vert-middle">
-              <button type="roll" name="roll_Death_Saving_Throw" value="@{death_save_output_option} &{template:5e} {{death_save=1}} {{character_name=@{character_name}}} @{show_character_name} @{show_character_name} {{emote=dices with death!}} {{title=Death Save}} {{sub_header=Saving Throw}} {{rollname=Death save}} {{roll=[[d20@{d20_mod} + (@{global_saving_bonus})]]}} {{roll_adv=[[d20@{d20_mod} + (@{global_saving_bonus})]]}} @{classactiondeath_save}">
+              <button type="roll" name="roll_Death_Saving_Throw" value="@{death_save_output_option} &{template:5e} {{death_save=1}} {{character_name=@{character_name}}} @{show_character_name} @{show_character_name} {{emote=dices with death!}} {{title=Death Save}} {{sub_header=Saving Throw}} {{roll_name=Death save}} {{roll=[[d20@{d20_mod} + (@{global_saving_bonus})]]}} {{roll_adv=[[d20@{d20_mod} + (@{global_saving_bonus})]]}} @{classactiondeath_save}">
                 <span class="sheet-pictos">k</span>
               </button>
             </div>

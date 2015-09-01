@@ -6,51 +6,53 @@
 
   <fieldset class="repeating_spellbook{{level_num}}">
     <div class="sheet-wrap-box sheet-relative sheet-mar-b-md">
-      <input type="hidden" name="attr_spellbaselevel" value="{{num}}">
+      <input type="hidden" name="attr_base_level" value="{{num}}">
       <input type="hidden" name="attr_higher_level_query" value="{{higherLevelQuery}}">
 
       <div class="sheet-col-25 sheet-vert-top sheet-pad-r-sm">
-        <input type="text" class="sheet-spell-name" name="attr_spellname" placeholder="name">
+        <input type="text" class="sheet-spell-name" name="attr_spell_name" placeholder="name">
       </div>
       <input type="checkbox" name="attr_spellisprepared" class="sheet-toggle-spells-prep-con-rit-prepared{{hidden_if_cantrip}}"{{checked_if_cantrip}}><span class="sheet-toggle-spells-prep-con-rit-prepared{{hidden_if_cantrip}}">
         <span class="sheet-en">prepared</span>
         <span class="sheet-de">vorbereitete</span>
       </span>
-      <input type="checkbox" name="attr_spell_ritual" class="sheet-toggle-spells-prep-con-rit-ritual{{hidden_if_cantrip}}" value="{{spell_ritual=1}}"><span class="sheet-toggle-spells-prep-con-rit-ritual{{hidden_if_cantrip}}">
+      <input type="hidden" name="attr_ritual_var" value="{{ritual=1}}">
+      <input type="checkbox" name="attr_ritual" class="sheet-toggle-spells-prep-con-rit-ritual{{hidden_if_cantrip}}" value="@{ritual_var}"><span class="sheet-toggle-spells-prep-con-rit-ritual{{hidden_if_cantrip}}">
         <span class="sheet-en">ritual</span>
         <span class="sheet-de">rituale</span>
       </span>
-      <input type="checkbox" name="attr_spell_concentration" class="sheet-toggle-spells-prep-con-rit-concentration" value="{{spell_concentration=1}}"><span class="sheet-toggle-spells-prep-con-rit-concentration">
+      <input type="hidden" name="attr_concentration_var" value="{{concentration=1}}">
+      <input type="checkbox" name="attr_concentration" class="sheet-toggle-spells-prep-con-rit-concentration" value="@{concentration_var}"><span class="sheet-toggle-spells-prep-con-rit-concentration">
         <span class="sheet-en">concentration</span>
         <span class="sheet-de">konzentration</span>
       </span>
-      <input type="hidden" name="attr_spell_components_verbal_var" value="{{spell_components_verbal=1}}">
-      <input type="hidden" name="attr_spell_components_somatic_var" value="{{spell_components_somatic=1}}">
-      <input type="hidden" name="attr_spell_components_material_var" value="{{spell_components_material=@{spell_components}}}">
-      <input type="checkbox" name="attr_spell_components_verbal" class="sheet-toggle-spell-vsm-v" value="@{spell_components_verbal_var}"><span class="sheet-toggle-spell-vsm-v">V</span>
-      <input type="checkbox" name="attr_spell_components_somatic" class="sheet-toggle-spell-vsm-s" value="@{spell_components_somatic_var}"><span class="sheet-toggle-spell-vsm-s">S</span>
-      <input type="checkbox" name="attr_spell_components_material" class="sheet-toggle-spell-vsm-m" value="@{spell_components_material_var}"><span class="sheet-toggle-spell-vsm-m">M</span>
-      <input type="hidden" name="attr_spell_casting_time_reaction_var" value="1 reaction">
-      <input type="hidden" name="attr_spell_casting_time_bonus_var" value="1 bonus action">
-      <input type="hidden" name="attr_spell_casting_time_action_var" value="1 action">
-      <input type="hidden" name="attr_spell_casting_time_minute_var" value="1 minute">
-      <input type="hidden" name="attr_spell_casting_time_longer_var" value="@{spellcasttime}">
-      <input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-reaction" value="@{spell_casting_time_reaction_var}"><span class="sheet-toggle-casting-time-reaction">reaction</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-bonus" value="@{spell_casting_time_bonus_var}"><span class="sheet-toggle-casting-time-bonus sheet-border-left">bonus</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-action" value="@{spell_casting_time_action_var}" checked><span class="sheet-toggle-casting-time-action sheet-border-left">action</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-minute" value="@{spell_casting_time_minute_var}"><span class="sheet-toggle-casting-time-minute sheet-border-left">1 min</span><input type="radio" name="attr_spell_casting_time" class="sheet-toggle-casting-time-longer" value="@{spell_casting_time_longer_var}"><span class="sheet-toggle-casting-time-longer sheet-border-left">longer</span>
+      <input type="hidden" name="attr_components_verbal_var" value="{{components_verbal=1}}">
+      <input type="hidden" name="attr_components_somatic_var" value="{{components_somatic=1}}">
+      <input type="hidden" name="attr_components_material_var" value="{{components_material=@{material_components}}}">
+      <input type="checkbox" name="attr_components_verbal" class="sheet-toggle-spell-vsm-v" value="@{components_verbal_var}"><span class="sheet-toggle-spell-vsm-v">V</span>
+      <input type="checkbox" name="attr_components_somatic" class="sheet-toggle-spell-vsm-s" value="@{components_somatic_var}"><span class="sheet-toggle-spell-vsm-s">S</span>
+      <input type="checkbox" name="attr_components_material" class="sheet-toggle-spell-vsm-m" value="@{components_material_var}"><span class="sheet-toggle-spell-vsm-m">M</span>
+      <input type="hidden" name="attr_casting_time_reaction_var" value="1 reaction">
+      <input type="hidden" name="attr_casting_time_bonus_var" value="1 bonus action">
+      <input type="hidden" name="attr_casting_time_action_var" value="1 action">
+      <input type="hidden" name="attr_casting_time_minute_var" value="1 minute">
+      <input type="hidden" name="attr_casting_time_longer_var" value="@{casting_time_longer}">
+      <input type="radio" name="attr_casting_time" class="sheet-toggle-casting-time-reaction" value="@{casting_time_reaction_var}"><span class="sheet-toggle-casting-time-reaction">reaction</span><input type="radio" name="attr_casting_time" class="sheet-toggle-casting-time-bonus" value="@{casting_time_bonus_var}"><span class="sheet-toggle-casting-time-bonus sheet-border-left">bonus</span><input type="radio" name="attr_casting_time" class="sheet-toggle-casting-time-action" value="@{casting_time_action_var}" checked><span class="sheet-toggle-casting-time-action sheet-border-left">action</span><input type="radio" name="attr_casting_time" class="sheet-toggle-casting-time-minute" value="@{casting_time_minute_var}"><span class="sheet-toggle-casting-time-minute sheet-border-left">1 min</span><input type="radio" name="attr_casting_time" class="sheet-toggle-casting-time-longer" value="@{casting_time_longer_var}"><span class="sheet-toggle-casting-time-longer sheet-border-left">longer</span>
       <div class="sheet-spells-toggle-spell sheet-inline">
         <div class="sheet-col sheet-relative sheet-toggle-casting-time-longer">
           <div class="sheet-casting-time-longer sheet-center sheet-vert-middle sheet-pad-l-sm">
-            <input type="text" class="sheet-center" name="attr_spellcasttime">
+            <input type="text" class="sheet-center" name="attr_casting_time_longer">
           </div>
         </div>
         <div class="sheet-col-07 sheet-center sheet-vert-middle sheet-pad-l-sm">
-          <input type="text" class="sheet-center" name="attr_spellrange">
+          <input type="text" class="sheet-center" name="attr_range">
           <div class="sheet-small-label">
             <span class="sheet-en">Range</span>
             <span class="sheet-de">Reichweite</span>
           </div>
         </div>
         <div class="sheet-col-10 sheet-center sheet-vert-middle sheet-pad-l-sm">
-          <input type="text" class="sheet-center" name="attr_spellduration">
+          <input type="text" class="sheet-center" name="attr_duration">
           <div class="sheet-small-label">
             <span class="sheet-en">Duration</span>
             <span class="sheet-de">Dauer</span>
@@ -59,12 +61,12 @@
         <div class="sheet-spell-button-group sheet-right">
           <div class="sheet-shaped-row">
             <div class="sheet-col sheet-center sheet-vert-middle">
-              <button type="roll" name="roll_SpellInfo" value="@{output_option} &{template:5e} {{spell=1}} {{character_name=@{character_name}}} @{show_character_name} {{spell_friendly_level={{level_num_readable}}}} {{title=@{spellname}}} @{spell_concentration} @{spell_ritual} {{spell_school=@{spell_school}}} {{spellcasttime=@{spellcasttime}}} {{spell_casting_time=@{spell_casting_time}}} {{spellduration=@{spellduration}}} {{target=@{spelltarget}}} {{aoe=@{spellaoe}}} {{range=@{spellrange}}} @{spell_components_verbal} @{spell_components_somatic} @{spell_components_material} {{spelldescription=@{spelldescription}}} {{spellhigherlevel=@{spellhighersloteffect}}} @{classactionspellinfo}">
+              <button type="roll" name="roll_SpellInfo" value="@{output_option} &{template:5e} {{spell=1}} {{character_name=@{character_name}}} @{show_character_name} {{spell_friendly_level={{level_num_readable}}}} {{title=@{spell_name}}} @{concentration} @{ritual} {{school=@{school}}} {{casting_time=@{casting_time}}} {{duration=@{duration}}} {{target=@{target}}} {{aoe=@{aoe}}} {{range=@{range}}} @{components_verbal} @{components_somatic} @{components_material} {{description=@{description}}} {{higher_level_effects=@{higher_slot_effect}}} @{classactionspellinfo}">
                 <span>Info</span>
               </button>
             </div>
             <div class="sheet-col sheet-center sheet-vert-middle">
-              <button type="roll" name="roll_SpellCast" value="@{output_option} &{template:5e} {{spell=1}} {{character_name=@{character_name}}} @{show_character_name} {{spell_friendly_level={{level_num_readable}}}} {{title=@{spellname}}} @{spell_concentration} @{spell_ritual} {{spell_school=@{spell_school}}} {{spellcasttime=@{spellcasttime}}} {{spell_casting_time=@{spell_casting_time}}} {{spellduration=@{spellduration}}} {{target=@{spelltarget}}} {{aoe=@{spellaoe}}} {{range=@{spellrange}}} @{spell_components_verbal} @{spell_components_somatic} @{spell_components_material} @{spell_toggle_description} {{spellhigherlevel=@{spellhighersloteffect}}} {{emote=@{spellemote}}} @{spell_toggle_attack} @{spell_toggle_attack_damage} @{spell_toggle_attack_second_damage} @{spell_toggle_save} @{spell_toggle_save_damage} @{spell_toggle_healing} {{effects=@{spelleffect}}} {{spellsource=@{spellsource}}} {{spellgainedfrom=@{spellgainedfrom}}} @{spell_toggle_output_higher_lvl_query} @{classactionspellcast}">
+              <button type="roll" name="roll_SpellCast" value="@{output_option} &{template:5e} {{spell=1}} {{character_name=@{character_name}}} @{show_character_name} {{spell_friendly_level={{level_num_readable}}}} {{title=@{spell_name}}} @{concentration} @{ritual} {{school=@{school}}} {{casting_time=@{casting_time}}} {{duration=@{duration}}} {{target=@{target}}} {{aoe=@{aoe}}} {{range=@{range}}} @{components_verbal} @{components_somatic} @{components_material} @{spell_toggle_description} {{higher_level_effects=@{higher_slot_effect}}} {{emote=@{spellemote}}} @{spell_toggle_attack} @{spell_toggle_attack_damage} @{spell_toggle_attack_second_damage} @{spell_toggle_save} @{spell_toggle_save_damage} @{spell_toggle_healing} {{effects=@{spelleffect}}} {{source=@{source}}} {{gained_from=@{gained_from}}} @{spell_toggle_output_higher_lvl_query} @{classactionspellcast}">
                 <span>Cast</span>
               </button>
             </div>
@@ -75,7 +77,7 @@
         <div class="sheet-shaped-row sheet-mar-b-md">
           <div class="sheet-col-11 sheet-center sheet-vert-middle sheet-pad-r-sm">
             <span class="sheet-en">
-              <select name="attr_spell_school">
+              <select name="attr_school">
                 <option selected>&#8212;</option>
                 <option value="Abjuration">Abjuration</option>
                 <option value="Conjuration">Conjuration</option>
@@ -88,7 +90,7 @@
               </select>
             </span>
             <span class="sheet-de">
-              <select name="attr_spell_school">
+              <select name="attr_school">
                 <option selected>&#8212;</option>
                 <option value="Abjuration">Bannzauber</option>
                 <option value="Conjuration">Beschwörung</option>
@@ -106,21 +108,21 @@
             </div>
           </div>
           <div class="sheet-col-20 sheet-center sheet-vert-middle sheet-pad-r-sm sheet-toggle-spell-vsm-m">
-            <textarea class="sheet-center sheet-xs-textarea" name="attr_spell_components"></textarea>
+            <textarea class="sheet-center sheet-xs-textarea" name="attr_material_components"></textarea>
             <div class="sheet-small-label">
               <span class="sheet-en">Materials</span>
               <span class="sheet-de">Materialien</span>
             </div>
           </div>
           <div class="sheet-col-34 sheet-vert-middle sheet-pad-r-sm">
-            <textarea class="sheet-center sheet-xs-textarea" name="attr_spelltarget"></textarea>
+            <textarea class="sheet-center sheet-xs-textarea" name="attr_target"></textarea>
             <div class="sheet-center sheet-small-label">
               <span class="sheet-en">Target</span>
               <span class="sheet-de">Ziel</span>
             </div>
           </div>
           <div class="sheet-col-34 sheet-vert-middle sheet-pad-r-sm">
-            <textarea class="sheet-center sheet-xs-textarea" name="attr_spellaoe"></textarea>
+            <textarea class="sheet-center sheet-xs-textarea" name="attr_aoe"></textarea>
             <div class="sheet-center sheet-small-label">
               <span class="sheet-en">AoE</span>
               <span class="sheet-de">AoE</span>
@@ -137,14 +139,14 @@
             </div>
           </div>
           <div class="sheet-col-13 sheet-center sheet-pad-r-sm" title="Use this field to indicate where you learned or have access to this spell from. Useful to know if multiclassing or if you gain access to spells your class would not normally have thanks to subclass bonuses">
-            <input type="text" class="sheet-center" name="attr_spellgainedfrom">
+            <input type="text" class="sheet-center" name="attr_gained_from">
             <div class="sheet-small-label">
               <span class="sheet-en">From</span>
               <span class="sheet-de">Von</span>
             </div>
           </div>
           <div class="sheet-col-06 sheet-vert-middle sheet-pad-l-sm">
-            <input type="text" class="sheet-center" name="attr_spellsource">
+            <input type="text" class="sheet-center" name="attr_source">
             <div class="sheet-center sheet-small-label">
               <span class="sheet-en">Source</span>
               <span class="sheet-de">Quelle</span>
@@ -152,15 +154,15 @@
           </div>
         </div>
 
-        <input type="hidden" name="attr_spell_var_description" value="{{spelldescription=@{spelldescription}}}">
+        <input type="hidden" name="attr_spell_var_description" value="{{description=@{description}}}">
         <input type="hidden" name="attr_spell_var_output_higher_lvl_query" value="{{spell_cast_as_level=?{Spell Level}}}">
         <input type="hidden" name="attr_spell_var_attack" value="{{attack=[[d20cs>@{spell_attack_crit_range}@{d20_mod} + @{spell_to_hit} + (@{global_spell_attack_bonus})]]}} {{attack_adv=[[d20cs>@{spell_attack_crit_range}@{d20_mod} + @{spell_to_hit} + (@{global_spell_attack_bonus})]]}} {{targetAC=@{attacks_vs_target_ac}}} {{targetName=@{attacks_vs_target_name}}}">
-        <input type="hidden" name="attr_spell_var_attack_damage" value="{{damage=[[0d0 + @{spell_attack_dmg}[dmg] + @{spell_attack_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_attack_higher_level_dmg_dice})@{spell_attack_higher_level_dmg_die}[higher lvl]]]}} {{damage_type=@{spell_attack_dmg_type}}} {{crit_damage=[[0d0 + @{spell_attack_dmg} + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_attack_higher_level_dmg_dice})@{spell_attack_higher_level_dmg_die}[higher lvl]]]}}">
-        <input type="hidden" name="attr_spell_var_attack_second_damage" value="{{second_damage=[[0d0 + @{spell_attack_second_dmg}[dmg] + @{spell_attack_second_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_attack_second_higher_level_dmg_dice})@{spell_attack_second_higher_level_dmg_die}[higher lvl]]]}} {{second_damage_type=@{spell_attack_second_dmg_type}}} {{second_crit_damage=[[0d0 + @{spell_attack_second_dmg} + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_attack_second_higher_level_dmg_dice})@{spell_attack_second_higher_level_dmg_die}[higher lvl]]]}}">
+        <input type="hidden" name="attr_spell_var_attack_damage" value="{{damage=[[0d0 + @{spell_attack_dmg}[dmg] + @{spell_attack_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{spell_attack_higher_level_dmg_dice})@{spell_attack_higher_level_dmg_die}[higher lvl]]]}} {{damage_type=@{spell_attack_dmg_type}}} {{crit_damage=[[0d0 + @{spell_attack_dmg} + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{spell_attack_higher_level_dmg_dice})@{spell_attack_higher_level_dmg_die}[higher lvl]]]}}">
+        <input type="hidden" name="attr_spell_var_attack_second_damage" value="{{second_damage=[[0d0 + @{spell_attack_second_dmg}[dmg] + @{spell_attack_second_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{spell_attack_second_higher_level_dmg_dice})@{spell_attack_second_higher_level_dmg_die}[higher lvl]]]}} {{second_damage_type=@{spell_attack_second_dmg_type}}} {{second_crit_damage=[[0d0 + @{spell_attack_second_dmg} + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{spell_attack_second_higher_level_dmg_dice})@{spell_attack_second_higher_level_dmg_die}[higher lvl]]]}}">
         <input type="hidden" name="attr_spell_var_save" value="{{save_dc=[[@{spell_save_dc_total}]]}} {{save_stat=@{savestat}}} {{save_condition=@{save_condition}}} {{save_failure=@{savefailure}}} {{save_success=@{savesuccess}}} {{targetName=@{attacks_vs_target_name}}}">
-        <input type="hidden" name="attr_spell_var_save_damage" value="{{save_damage=[[0d0 + @{spell_save_dmg}[dmg] + @{spell_save_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_save_higher_level_dmg_dice})@{spell_save_higher_level_dmg_die}[higher lvl] ]]}} {{save_damage_type=@{spell_save_dmg_type}}}">
-        <input type="hidden" name="attr_spell_var_save_second_damage" value="{{save_second_damage=[[0d0 + @{spell_save_second_dmg}[dmg] + @{spell_save_second_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_save_second_higher_level_dmg_dice})@{spell_save_second_higher_level_dmg_die}[higher lvl] ]]}} {{save_second_damage_type=@{spell_save_second_dmg_type}}}">
-        <input type="hidden" name="attr_spell_var_healing" value="{{spellhealing=[[0d0 + @{spellhealamount}[amount] + @{healstatbonus}[stat bonus] + @{healbonus}[bonus] + (@{global_spell_heal_bonus})[global spell heal bonus] + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_heal_higher_level_amount}) + ((@{spell_toggle_higher_lvl_query} - @{spellbaselevel}) * @{spell_heal_higher_level_dmg_dice})@{spell_heal_higher_level_dmg_die}[higher lvl] ]]}}">
+        <input type="hidden" name="attr_spell_var_save_damage" value="{{save_damage=[[0d0 + @{spell_save_dmg}[dmg] + @{spell_save_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{spell_save_higher_level_dmg_dice})@{spell_save_higher_level_dmg_die}[higher lvl] ]]}} {{save_damage_type=@{spell_save_dmg_type}}}">
+        <input type="hidden" name="attr_spell_var_save_second_damage" value="{{save_second_damage=[[0d0 + @{spell_save_second_dmg}[dmg] + @{spell_save_second_dmg_total}[bonus dmg] + (@{global_spell_damage_bonus})[global spell dmg bonus] + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{spell_save_second_higher_level_dmg_dice})@{spell_save_second_higher_level_dmg_die}[higher lvl] ]]}} {{save_second_damage_type=@{spell_save_second_dmg_type}}}">
+        <input type="hidden" name="attr_spell_var_healing" value="{{heal=[[0d0 + @{heal_amount}[amount] + @{healstatbonus}[stat bonus] + @{heal_bonus}[bonus] + (@{global_spell_heal_bonus})[global spell heal bonus] + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{heal_higher_level_amount}) + ((@{spell_toggle_higher_lvl_query} - @{base_level}) * @{heal_higher_level_dmg_dice})@{heal_higher_level_dmg_die}[higher lvl] ]]}}">
 
         <input type="checkbox" name="attr_spell_toggle_description" class="sheet-toggle-description" value="@{spell_var_description}"><span class="sheet-toggle-description">
           <span class="sheet-en">Description</span>
@@ -200,7 +202,7 @@
 
         <div class="sheet-shaped-row sheet-mar-b-md">
           <div class="sheet-col-2-3 sheet-toggle-description sheet-center sheet-pad-r-sm">
-            <textarea class="sheet-small-textarea" name="attr_spelldescription"></textarea>
+            <textarea class="sheet-small-textarea" name="attr_description"></textarea>
             <div class="sheet-small-label">
               <span class="sheet-en">Spell Description</span>
               <span class="sheet-de">Zauberbeschreibung</span>
@@ -209,7 +211,7 @@
         </div>
 
         <div class="sheet-center sheet-pad-l-sm">
-          <textarea class="sheet-xs-textarea" name="attr_spellhighersloteffect"></textarea>
+          <textarea class="sheet-xs-textarea" name="attr_higher_slot_effect"></textarea>
           <div class="sheet-small-label">
             <span class="sheet-en">Higher Spell Slot</span>
             <span class="sheet-de">Höherer Zauberstufen</span>
@@ -497,14 +499,14 @@
         </div>
         <div class="sheet-toggle-heal sheet-shaped-row sheet-center sheet-mar-t-md">
           <div class="sheet-col-08 sheet-center sheet-pad-r-sm">
-            <input type="text" class="sheet-center" name="attr_spellhealamount" value="0">
+            <input type="text" class="sheet-center" name="attr_heal_amount" value="0">
             <div class="sheet-small-label">
               <span class="sheet-en">Heal amount</span>
               <span class="sheet-de">Heilmenge</span>
             </div>
           </div>
           <div class="sheet-col-08 sheet-center sheet-pad-r-sm">
-            <input type="text" class="sheet-center" name="attr_healbonus" value="0">
+            <input type="text" class="sheet-center" name="attr_heal_bonus" value="0">
             <div class="sheet-small-label">
               <span class="sheet-en">Heal Bonus</span>
               <span class="sheet-de">Heilbonus</span>
@@ -533,15 +535,15 @@
             </div>
           </div>
           <div class="sheet-col-08 sheet-toggle-spell-higherlvl-query sheet-border-left sheet-center sheet-vert-top sheet-pad-l-sm sheet-pad-r-sm">
-            <input class="sheet-center" type="text" name="attr_spell_heal_higher_level_amount" value="0">
+            <input class="sheet-center" type="text" name="attr_heal_higher_level_amount" value="0">
             <div class="sheet-small-label">Higher Lvl<br>Heal Amount</div>
           </div>
           <div class="sheet-col-08 sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm">
-            <input class="sheet-center" type="number" name="attr_spell_heal_higher_level_dmg_dice" value="0" placeholder="1">
+            <input class="sheet-center" type="number" name="attr_heal_higher_level_dmg_dice" value="0" placeholder="1">
             <div class="sheet-small-label">Higher Lvl<br>Heal Dice</div>
           </div>
           <div class="sheet-col-08 sheet-toggle-spell-higherlvl-query sheet-center sheet-vert-top sheet-pad-l-sm">
-            <input class="sheet-center" type="text" name="attr_spell_heal_higher_level_dmg_die" value="0" placeholder="d6">
+            <input class="sheet-center" type="text" name="attr_heal_higher_level_dmg_die" value="0" placeholder="d6">
             <div class="sheet-small-label">Higher Lvl<br>Heal Die</div>
           </div>
         </div>
