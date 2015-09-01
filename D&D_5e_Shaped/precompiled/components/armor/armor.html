@@ -6,25 +6,24 @@
   <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm">
     <span class="sheet-en">
       <select name="attr_armor_type_{{num}}">
-        <option value="0" selected>Other</option>
-        <option value="@{dexterity_mod}">Light</option>
-        <option value="(ceil((@{dexterity_mod}-1)/1e10)*2 - floor((@{dexterity_mod}-2)/1e10)*@{dexterity_mod})">Medium</option>
-        <option value="0">Heavy</option>
+        <option value="@{armor_type_light}">Light</option>
+        <option value="@{armor_type_medium}">Medium</option>
+        <option value="@{armor_type_heavy}">Heavy</option>
       </select>
     </span>
     <span class="sheet-de">
       <select name="attr_armor_type_{{num}}">
-        <option value="0" selected>Sonstiges</option>
-        <option value="@{dexterity_mod}">Leichte Rüstung</option>
-        <option value="(ceil((@{dexterity_mod}-1)/1e10)*2 - floor((@{dexterity_mod}-2)/1e10)*@{dexterity_mod})">Mittleschwere Rüstung</option>
-        <option value="0">Schwere Rüstung</option>
+        <option value="@{armor_type_light}">Leichte Rüstung</option>
+        <option value="@{armor_type_medium}">Mittleschwere Rüstung</option>
+        <option value="@{armor_type_heavy}">Schwere Rüstung</option>
       </select>
     </span>
   </div>
-  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armormagicbonus{{num}}" value="0" step="1"></div>
-  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armortotalAC{{num}}" value="@{armor_AC_base_{{num}}}+floor(@{armor_type_{{num}}})+@{armor_magic_bonus_{{num}}}" disabled="disabled"></div>
+  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armor_magic_bonus_{{num}}" value="0" step="1"></div>
+  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armor_total_AC_{{num}}" value="@{armor_AC_base_{{num}}}+@{armor_type_{{num}}}+@{armor_magic_bonus_{{num}}}" disabled="disabled"></div>
   <div class="sheet-col-10 sheet-center sheet-vert-middle">
-    <input type="checkbox" name="attr_armor_stealth_pen_{{num}}" value="Disadvantage on Stealth">
+    <input type="hidden" name="attr_armor_stealth_pen_{{num}}_var" value="Disadvantage on Stealth">
+    <input type="checkbox" name="attr_armor_stealth_pen_{{num}}" value="@{armor_stealth_pen_{{num}}_var}">
   </div>
   <div class="sheet-col-10 sheet-vert-middle">
     <select name="attr_armor_speed_pen_{{num}}">
