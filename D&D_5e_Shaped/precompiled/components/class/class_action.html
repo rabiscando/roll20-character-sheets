@@ -43,7 +43,7 @@
     <div class="sheet-action-button-group sheet-right">
       <div class="sheet-shaped-row">
         <div class="sheet-col sheet-center sheet-vert-middle">
-          <button type="roll" name="roll_classaction{{num}}" value="@{output_option} &{template:5eDefault} {{classaction={{num}}}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{classactionname{{num}}}}} {{subheader=Class Action {{num}}}} {{freetext=@{classactionoutput{{num}}}}}">
+          <button type="roll" name="roll_classaction{{num}}" value="@{output_option} &{template:5e} {{classaction={{num}}}} {{character_name=@{character_name}}} @{show_character_name} {{title=@{classactionname{{num}}}}} {{sub_header=Class Action {{num}}}} {{freetext=@{classactionoutput{{num}}}}}">
             <span>Use</span>
           </button>
         </div>
@@ -93,7 +93,7 @@
           </div>
           <div class="sheet-shaped-row sheet-mar-r-md">
             <div class="sheet-col-90">Death Save</div>
-            <div class="sheet-col-10"><input type="checkbox" name="attr_classactiondeathsave{{num}}" value="@{class_action_output_var_{{num}}}"></div>
+            <div class="sheet-col-10"><input type="checkbox" name="attr_classactiondeath_save{{num}}" value="@{class_action_output_var_{{num}}}"></div>
           </div>
         </div>
       </div>
