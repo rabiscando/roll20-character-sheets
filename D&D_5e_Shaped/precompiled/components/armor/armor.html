@@ -1,35 +1,48 @@
 <div class="sheet-shaped-row">
-  <div class="sheet-col-05 sheet-center sheet-vert-middle"><input type="checkbox" name="attr_armor_worn_{{num}}" value="@{armor_total_AC_{{num}}}"></div>
-  <div class="sheet-col-05 sheet-center sheet-vert-middle"><input type="checkbox" name="attr_armor_unarmored_{{num}}" value="@{armor_total_AC_{{num}}}"></div>
-  <div class="sheet-col-25 sheet-vert-middle sheet-pad-r-sm"><input type="text" name="attr_armor_name_{{num}}"></div>
-  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armor_AC_base_{{num}}" value="0" step="1"></div>
+  <div class="sheet-col-05 sheet-center sheet-vert-middle">
+    <input type="checkbox" name="attr_repeating_armor_{{num}}_worn" value="@{repeating_armor_{{num}}_total_AC}" checked>
+  </div>
+  <div class="sheet-col-05 sheet-center sheet-vert-middle">
+    <input type="checkbox" name="attr_repeating_armor_{{num}}_unarmored" value="@{repeating_armor_{{num}}_total_AC}">
+  </div>
+  <div class="sheet-col-25 sheet-vert-middle sheet-pad-r-sm">
+    <input type="text" name="attr_repeating_armor_{{num}}_name">
+  </div>
+  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm">
+    <input type="number" name="attr_repeating_armor_{{num}}_AC_base" value="0" step="1">
+  </div>
   <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm">
     <span class="sheet-en">
-      <select name="attr_armor_type_{{num}}">
+      <select name="attr_repeating_armor_{{num}}_type">
+        <option value="@{armor_type_other}">Other</option>
         <option value="@{armor_type_light}">Light</option>
         <option value="@{armor_type_medium}">Medium</option>
         <option value="@{armor_type_heavy}">Heavy</option>
       </select>
     </span>
     <span class="sheet-de">
-      <select name="attr_armor_type_{{num}}">
+      <select name="attr_repeating_armor_{{num}}_type">
+        <option value="@{armor_type_other}">Other</option>
         <option value="@{armor_type_light}">Leichte Rüstung</option>
         <option value="@{armor_type_medium}">Mittleschwere Rüstung</option>
         <option value="@{armor_type_heavy}">Schwere Rüstung</option>
       </select>
     </span>
   </div>
-  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armor_magic_bonus_{{num}}" value="0" step="1"></div>
-  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm"><input type="number" name="attr_armor_total_AC_{{num}}" value="@{armor_AC_base_{{num}}}+@{armor_type_{{num}}}+@{armor_magic_bonus_{{num}}}" disabled="disabled"></div>
+  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm">
+    <input type="number" name="attr_repeating_armor_{{num}_magic_bonus}" value="0" step="1">
+  </div>
+  <div class="sheet-col-08 sheet-vert-middle sheet-pad-r-sm">
+    <input type="number" name="attr_repeating_armor_{{num}}_total_AC" value="@{repeating_armor_{{num}}_AC_base} + @{repeating_armor_{{num}}_type} + @{repeating_armor_{{num}}_magic_bonus}" disabled="disabled">
+  </div>
   <div class="sheet-col-10 sheet-center sheet-vert-middle">
-    <input type="hidden" name="attr_armor_stealth_pen_{{num}}_var" value="Disadvantage on Stealth">
-    <input type="checkbox" name="attr_armor_stealth_pen_{{num}}" value="@{armor_stealth_pen_{{num}}_var}">
+    <input type="checkbox" name="attr_repeating_armor_{{num}}_stealth_pen" value="@{armor_stealth_pen}">
   </div>
   <div class="sheet-col-10 sheet-vert-middle">
-    <select name="attr_armor_speed_pen_{{num}}">
-      <option value="No" selected>No</option>
-      <option value="If Str &lt; 13">If Str &lt; 13</option>
-      <option value="If Str &lt; 15">If Str &lt; 15</option>
+    <select name="attr_repeating_armor_{{num}}_speed_pen">
+      <option value="@{armor_speed_pen_no}" selected>No</option>
+      <option value="@{armor_speed_pen_str_13}">If Str &lt; 13</option>
+      <option value="@{armor_speed_pen_str_15}">If Str &lt; 15</option>
     </select>
   </div>
 </div>

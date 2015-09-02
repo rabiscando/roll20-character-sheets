@@ -18,8 +18,8 @@ var customSkillCount = 4,
 	classActionsPerPage = 10,
 	customClassCount = 6,
 	spellCount = 10,
-	armorCount = 6,
-	inventoryPerPage = 20,
+	armorCount = 5,
+	inventoryCount = 60,
 	abilitiesName = ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma'];
 
 String.prototype.capitalize = function() {
@@ -361,25 +361,13 @@ gulp.task('preCompile', function() {
 		.pipe( inject(gulp.src(['./components/armor/armor.html']), {
 			starttag: '<!-- inject:armor:{{ext}} -->',
 			transform: function (filePath, file) {
-				return duplicate(file, armorCount, 1);
+				return duplicate(file, armorCount);
 			}
 		}))
 		.pipe( inject(gulp.src(['./components/inventory/inventory.html']), {
-			starttag: '<!-- inject:inventory_1:{{ext}} -->',
+			starttag: '<!-- inject:inventory:{{ext}} -->',
 			transform: function (filePath, file) {
-				return duplicate(file, inventoryPerPage, 1);
-			}
-		}))
-		.pipe( inject(gulp.src(['./components/inventory/inventory.html']), {
-			starttag: '<!-- inject:inventory_2:{{ext}} -->',
-			transform: function (filePath, file) {
-				return duplicate(file, inventoryPerPage, 1 + inventoryPerPage);
-			}
-		}))
-		.pipe( inject(gulp.src(['./components/inventory/inventory.html']), {
-			starttag: '<!-- inject:inventory_3:{{ext}} -->',
-			transform: function (filePath, file) {
-				return duplicate(file, inventoryPerPage, 1 + inventoryPerPage + inventoryPerPage);
+				return duplicate(file, inventoryCount);
 			}
 		}))
 		.pipe( inject(gulp.src(['./components/macros/saves.html']), {

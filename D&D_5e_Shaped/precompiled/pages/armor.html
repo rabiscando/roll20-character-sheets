@@ -1,7 +1,7 @@
 <div class="sheet-section-armor sheet-pc">
   <h4 class="sheet-center sheet-relative">
-    <span class="sheet-en">Armor Class </span>
-    <span class="sheet-de">Rüstungsklasse </span>
+    <span class="sheet-en">Armor Class</span>
+    <span class="sheet-de">Rüstungsklasse</span>
     <span class="sheet-pictos-three">b</span>
   </h4>
   <div class="sheet-shaped-row sheet-pad-b-md">
@@ -13,14 +13,14 @@
       </div>
     </div>
     <div class="sheet-col-10 sheet-center sheet-pad-r-md">
-      <input type="number" name="attr_AC_armor_calc" value="(@{armor_worn_1}+@{armor_worn_2}+@{armor_worn_3}+@{armor_worn_4}+@{armor_worn_5}+@{armor_worn_6} + @{global_ac_bonus})" disabled="disabled">
+      <input type="number" name="attr_AC_armor_calc" value="(@{repeating_armor_0_worn} + @{repeating_armor_1_worn} + @{repeating_armor_2_worn} + @{repeating_armor_3_worn} + @{repeating_armor_4_worn} + (@{global_ac_bonus}))" disabled="disabled">
       <div class="sheet-small-label">
         <span class="sheet-en">Armored AC</span>
         <span class="sheet-de">RK (gerüstet)</span>
       </div>
     </div>
     <div class="sheet-col-10 sheet-center sheet-pad-r-md">
-      <input type="number" name="attr_AC_no_armor_calc" value="(10+@{dexterity_mod}+floor(@{unarmored_class_bonus})+@{armor_unarmored_1}+@{armor_unarmored_2}+@{armor_unarmored_3}+@{armor_unarmored_4}+@{armor_unarmored_5}+@{armor_unarmored_6} + @{global_ac_bonus})" disabled="disabled">
+      <input type="number" name="attr_AC_no_armor_calc" value="(10 + @{dexterity_mod} + @{unarmored_class_bonus} + @{repeating_armor_0_unarmored} + @{repeating_armor_1_unarmored} + @{repeating_armor_2_unarmored} + @{repeating_armor_3_unarmored} + @{repeating_armor_4_unarmored} + (@{global_ac_bonus}))" disabled="disabled">
       <div class="sheet-small-label">
         <span class="sheet-en">Unarmored AC</span>
         <span class="sheet-de">RK (ungerüstet)</span>
@@ -107,9 +107,16 @@
     </div>
   </div>
 
+  <input type="hidden" name="attr_armor_type_other" value="0">
   <input type="hidden" name="attr_armor_type_light" value="@{dexterity_mod}">
   <input type="hidden" name="attr_armor_type_medium" value="((@{dexterity_mod} + 2 + abs(@{dexterity_mod} - 2)) / 2)">
   <input type="hidden" name="attr_armor_type_heavy" value="0">
+
+  <input type="hidden" name="attr_armor_stealth_pen" value="Disadvantage on Stealth">
+
+  <input type="hidden" name="attr_armor_speed_pen_no" value="no">
+  <input type="hidden" name="attr_armor_speed_pen_str_13" value="If Str &lt; 13">
+  <input type="hidden" name="attr_armor_speed_pen_str_15" value="If Str &lt; 15">
 
   <!-- inject:armor:html -->
   <!-- endinject -->
