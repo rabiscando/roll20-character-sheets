@@ -1,16 +1,16 @@
 <div class="sheet-section-actions sheet-npc">
   <h4 class="sheet-center">Actions <span class="sheet-pictos">D</span></h4>
-  <input type="checkbox" name="attr_toggle_traits" class="sheet-toggle-traits"><span class="sheet-toggle-traits"><span class="sheet-en">Traits</span><span class="sheet-de">Traits</span><span class="sheet-fr">Traits</span></span>
-  <input type="checkbox" name="attr_toggle_regional_effects" class="sheet-toggle-regional-effects"><span class="sheet-toggle-regional-effects"><span class="sheet-en">Regional Effects</span><span class="sheet-de">Regional Effects</span><span class="sheet-fr">Effets de Région</span></span>
-  <input type="checkbox" name="attr_toggle_lair_actions" class="sheet-toggle-lair-actions"><span class="sheet-toggle-lair-actions"><span class="sheet-en">Lair Actions</span><span class="sheet-de">Lair Actions</span><span class="sheet-fr">Action de Repaire</span></span>
-  <input type="checkbox" name="attr_toggle_legendary_actions" class="sheet-toggle-legendary-actions"><span class="sheet-toggle-legendary-actions"><span class="sheet-en">Legendary Actions</span><span class="sheet-de">Legendary Actions</span><span class="sheet-fr">Actions Légendaires</span></span>
-  <input type="checkbox" name="attr_toggle_reactions" class="sheet-toggle-reactions"><span class="sheet-toggle-reactions"><span class="sheet-en">Reactions</span><span class="sheet-de">Reactions</span><span class="sheet-fr">Reactions</span></span>
-  <input type="checkbox" name="attr_toggle_multiattack" class="sheet-toggle-multiattack"><span class="sheet-toggle-multiattack"><span class="sheet-en">Multiattack</span><span class="sheet-de">Multiattack</span><span class="sheet-fr">Multiattaques</span></span>
-  <input type="checkbox" name="attr_toggle_actions" class="sheet-toggle-actions" checked><span class="sheet-toggle-actions"><span class="sheet-en">Actions</span><span class="sheet-de">Actions</span><span class="sheet-fr">Actions</span></span>
+  <input type="checkbox" name="attr_toggle_traits" class="sheet-toggle-traits"><span class="sheet-toggle-traits"><span class="sheet-en">Traits</span><span class="sheet-de">Traits</span><span class="sheet-fr">Traits</span><span class="sheet-pt-br">Talentos</span></span>
+  <input type="checkbox" name="attr_toggle_regional_effects" class="sheet-toggle-regional-effects"><span class="sheet-toggle-regional-effects"><span class="sheet-en">Regional Effects</span><span class="sheet-de">Regional Effects</span><span class="sheet-fr">Effets de Région</span><span class="sheet-pt-br">Efeitos de Região</span></span>
+  <input type="checkbox" name="attr_toggle_lair_actions" class="sheet-toggle-lair-actions"><span class="sheet-toggle-lair-actions"><span class="sheet-en">Lair Actions</span><span class="sheet-de">Lair Actions</span><span class="sheet-fr">Action de Repaire</span><span class="sheet-pt-br">Ação de Covil</span></span>
+  <input type="checkbox" name="attr_toggle_legendary_actions" class="sheet-toggle-legendary-actions"><span class="sheet-toggle-legendary-actions"><span class="sheet-en">Legendary Actions</span><span class="sheet-de">Legendary Actions</span><span class="sheet-fr">Actions Légendaires</span><span class="sheet-pt-br">Ações Lendárias</span></span>
+  <input type="checkbox" name="attr_toggle_reactions" class="sheet-toggle-reactions"><span class="sheet-toggle-reactions"><span class="sheet-en">Reactions</span><span class="sheet-de">Reactions</span><span class="sheet-fr">Reactions</span><span class="sheet-pt-br">Reações</span></span>
+  <input type="checkbox" name="attr_toggle_multiattack" class="sheet-toggle-multiattack"><span class="sheet-toggle-multiattack"><span class="sheet-en">Multiattack</span><span class="sheet-de">Multiattack</span><span class="sheet-fr">Multiattaques</span><span class="sheet-pt-br">Multiataques</span></span>
+  <input type="checkbox" name="attr_toggle_actions" class="sheet-toggle-actions" checked><span class="sheet-toggle-actions"><span class="sheet-en">Actions</span><span class="sheet-de">Actions</span><span class="sheet-fr">Actions</span><span class="sheet-pt-br">Ações</span></span>
 
 
   <div class="sheet-toggle-traits sheet-mar-t-md">
-    <div class="sheet-small-label sheet-important-text sheet-mar-t-md sheet-mar-b-md"><span class="sheet-en">Traits not enabled yet</span><span class="sheet-de">Traits not enabled yet</span><span class="sheet-fr">Traits pas encore implémentés</span></div>
+    <div class="sheet-small-label sheet-important-text sheet-mar-t-md sheet-mar-b-md"><span class="sheet-en">Traits not enabled yet</span><span class="sheet-de">Traits not enabled yet</span><span class="sheet-fr">Traits pas encore implémentés</span><span class="sheet-pt-br">Talentos ainda não habilitados</span></div>
     <!-- inject:traits:html -->
     <!-- endinject -->
     <hr>
@@ -21,12 +21,14 @@
         <span class="sheet-en">The mere presence of a legendary creature can have strange and wondrous effects on its environment, as noted in this section. Regional effects end abruptly or dissipate over time when the legendary creature dies.</span>
         <span class="sheet-de">The mere presence of a legendary creature can have strange and wondrous effects on its environment, as noted in this section. Regional effects end abruptly or dissipate over time when the legendary creature dies.</span>
         <span class="sheet-fr">La seule présence d'une créature légendaire peut avoir des effets mystérieux et étonnants sur son environnement, comme indiqué dans cette section. Les effets régionaux cessent de manière abrupte et immédiate ou se dissipent avec le temps quand la créature meurt.</span>
+		<span class="sheet-pt-br">A mera presença da lendária criatura pode ter efeitos estranhos e maravilhosos em seu ambiente, como indicados nesta seção. Efeitos de região terminam abruptamente ou dissipam com o tempo quando a criatura lendária morre.</span>
       </div>
       <textarea class="sheet-medium-textarea" name="attr_lair_actions"></textarea>
       <div class="sheet-wrap-box-title sheet-center">
         <span class="sheet-en">Regional Effects</span>
         <span class="sheet-de">Regional Effects</span>
         <span class="sheet-fr">Effets Régionaux</span>
+		<span class="sheet-pt-br">Efeitos Regionais</span>
       </div>
     </div>
     <hr>
@@ -36,6 +38,7 @@
       <span class="sheet-en">If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. On initiative count 20 (losing all initiative ties), the creature can use one of its lair action options, or forgo using any of them that round.</span>
       <span class="sheet-de">If a legendary creature has lair actions, it can use them to harness the ambient magic in its lair. On initiative count 20 (losing all initiative ties), the creature can use one of its lair action options, or forgo using any of them that round.</span>
       <span class="sheet-fr">Si une créature légendaire possède une action de repaire, elle peut l'utiliser pour y exploiter la magie ambiante. Quand l'initiative arrive à 20 (perdant toutes les égalité d'initiative), la créature peut effectuer une des ses actions de repaire, ou choisir de ne pas en faire ce tour-ci.</span>
+	  <span class="sheet-pt-br">Se uma criatura lendária tiver ações de covil, ela poderá usá-las para manter o ambiente mágico no covil. Quando a iniciativa chegar a 20 (perdendo todos o laços de iniciativa), a criatura pode usar uma dessas opções de ação do covil, ou renunciar a usá-lo nesta rodada.</span>
     </div>
   </div>
   <div class="sheet-toggle-lair-actions sheet-mar-t-md">
@@ -48,12 +51,14 @@
       <span class="sheet-en">A legendary creature can take 3 legendary actions. Only one legendary action option can be used at a time and only at the end of another creature's turn. A legendary creature regains spent legendary actions at the start of its turn. It isn't required to use its legendary actions, and it can't use them while incapacitated.</span>
       <span class="sheet-de">A legendary creature can take 3 legendary actions. Only one legendary action option can be used at a time and only at the end of another creature's turn. A legendary creature regains spent legendary actions at the start of its turn. It isn't required to use its legendary actions, and it can't use them while incapacitated.</span>
       <span class="sheet-fr">Une créature légendaire peut prendre 3 actions légendaires. Une seule action légendaire peut être utilisée à la fois et uniquement à la fin du tour d'une autre créature. Une créature légendaire regagne les actions légendaires qu'elle a dépensées au début de son tour. Une créature légendaire n'est pas obligée d'utiliser ses actions, et il lui est impossible de le faire si elle est incapable d'agir.</span>
+	  <span class="sheet-pt-br">Uma criatura lendária pode ter 3 ações lendárias. Somente uma ação lendária pode ser usada por vez e somente no fim do turno de outra criatura. A criatura lendária reganha os pontos de ação lendários gastos no início de seu turno. Isto não requer o uso de ações lendárias, e ela não pode usá-las enquanto incapacitada.</span>
     </div>
     <textarea class="sheet-small-textarea" name="attr_legendary_action_notes"></textarea>
     <div class="sheet-wrap-box-title">
       <span class="sheet-en">Legendary Action Notes</span>
       <span class="sheet-de">Legendary Action Notes</span>
-    <span class="sheet-fr">Notes Actions Légendaires</span>
+      <span class="sheet-fr">Notes Actions Légendaires</span>
+	  <span class="sheet-pt-br">Anotações de Ações Lendárias</span>
     </div>
   </div>
   <div class="sheet-toggle-legendary-actions sheet-mar-t-md">
@@ -70,6 +75,7 @@
             <span class="sheet-en">Reactions</span>
             <span class="sheet-de">Reactions</span>
             <span class="sheet-fr">Reactions</span>
+			<span class="sheet-pt-br">Reações</span>
           </div>
         </div>
         <hr>
@@ -85,7 +91,8 @@
           <div class="sheet-small-label">
             <span class="sheet-en">Multiattack Text</span>
             <span class="sheet-de">Multiattack Text</span>
-            <span class="sheet-fr">Texte Muliattaques</span>
+            <span class="sheet-fr">Texte Multiattaques</span>
+			<span class="sheet-pt-br">Texto Multiataques</span>
           </div>
         </div>
         <div class="sheet-col-50 sheet-center sheet-pad-l-sm">
@@ -93,7 +100,8 @@
           <div class="sheet-small-label">
             <span class="sheet-en">Multiattack Script</span>
             <span class="sheet-de">Multiattack Script</span>
-            <span class="sheet-fr">Script Mulitiattaque</span>
+            <span class="sheet-fr">Script Multiattaque</span>
+			<span class="sheet-pt-br">Script Multiataque</span>
           </div>
         </div>
         <div class="sheet-col-10 sheet-center sheet-pad-l-sm">
@@ -104,6 +112,7 @@
         <span class="sheet-en">Multiattack</span>
         <span class="sheet-de">Multiattack</span>
         <span class="sheet-fr">Multiattaques</span>
+		<span class="sheet-pt-br">Multiataques</span>
       </div>
     </div>
     <hr>
