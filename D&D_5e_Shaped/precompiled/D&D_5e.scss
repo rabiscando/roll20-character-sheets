@@ -1280,10 +1280,12 @@ input[value=English]:not(:checked) ~ span .sheet-en,
 input[value=German]:not(:checked) ~ span .sheet-de,
 input[value=French]:not(:checked) ~ span .sheet-fr,
 input[value=Spanish]:not(:checked) ~ span .sheet-es,
+input[value=Portuguese]:not(:checked) ~ span .sheet-pt-br,
 input[value=English]:not(:checked) ~ div .sheet-en,
 input[value=German]:not(:checked) ~ div .sheet-de,
 input[value=French]:not(:checked) ~ div .sheet-fr,
-input[value=Spanish]:not(:checked) ~ div .sheet-es {
+input[value=Spanish]:not(:checked) ~ div .sheet-es,
+input[value=Portuguese]:not(:checked) ~ div .sheet-pt-br{
 	display: none;
 }
 input.sheet-toggle-language,
@@ -1311,6 +1313,9 @@ span.sheet-toggle-language {
 	}
 	&.sheet-es {
 		background: url("http://i.imgur.com/UcndHqG.png");
+	}
+	&.sheet-pt-br {
+		background: url("http://i.imgur.com/Txar4Yk.png");
 	}
 
 }
